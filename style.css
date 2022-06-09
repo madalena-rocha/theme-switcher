@@ -1,0 +1,96 @@
+:root {
+	--dark: #292C35;
+	--light: #F1F1F1;
+	--label: #111;
+
+    font-size: 62.5%; /* 1rem = 10px */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 9.415rem;
+    height: 9.415rem;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column; /* aqui */
+    align-items: center;
+    justify-content: center;
+    gap: 3.885rem; /* aqui */
+
+    background-color: var(--dark);
+    color: var(--light); /* aqui */
+
+    font-size: 1.6rem; /* 16px */ /* aqui */
+
+    transition: all 0.5s ease;
+}
+
+.theme-switcher {
+    width: 23.538rem;
+    height: 10.2rem;
+
+    display: flex;
+    align-items: center;
+    gap: 3.885rem;
+
+    background-color: var(--label);
+
+    padding: .45rem .354rem;
+    border-radius: 5rem;
+}
+
+#switch-theme {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    transition: transform 500ms;
+}
+
+#switch-theme:hover {
+    filter: brightness(1.1);
+}
+
+#light-theme {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.container.active {
+    background-color: var(--light);
+    color: var(--dark); /* aqui */
+
+    transition: all 0.5s ease;
+}
+
+.theme-switcher.active #dark-theme {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.theme-switcher.active #switch-theme {
+    transform: translateX(-13.3rem);
+    transition: transform 500ms;
+}
+
+.theme-switcher.active #light-theme {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateX(-13.3rem);
+}
