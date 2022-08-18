@@ -27,15 +27,15 @@ img {
     height: 100vh;
 
     display: flex;
-    flex-direction: column; /* aqui */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 3.885rem; /* aqui */
+    gap: 3.885rem;
 
     background-color: var(--dark);
-    color: var(--light); /* aqui */
+    color: var(--light);
 
-    font-size: 1.6rem; /* 16px */ /* aqui */
+    font-size: 1.6rem; /* 16px */
 
     transition: all 0.5s ease;
 }
@@ -73,7 +73,7 @@ img {
 
 .container.active {
     background-color: var(--light);
-    color: var(--dark); /* aqui */
+    color: var(--dark);
 
     transition: all 0.5s ease;
 }
